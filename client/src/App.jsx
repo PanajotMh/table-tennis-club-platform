@@ -25,6 +25,9 @@ import Header from './Header.jsx';
 import Footer from './Footer.jsx';  
 import Food from './Food.jsx';
 import Card from './Card.jsx';
+import Button from './Button.jsx';
+import Student from './Student.jsx';
+
 
 function App() { //serve as the root
   return( // We only have capability to return one single component, enclose components with a fragment.
@@ -37,10 +40,16 @@ function App() { //serve as the root
       <Food> </Food>        
       <Food></Food>
       <Footer></Footer> */}
-          <Card></Card>
 
-      <Card></Card>
 
+
+      {//Student is the child of app in this case
+      //If I want to send some data to my student component, we need to list key: value pairs.
+      // When we send key value pairs to a component they're all stored within the props opbject.  Name is key, value is Spongebob or whatever Name
+      // If some data is not a string literal, you have to enclose it with curly braces
+      }
+        <Student name="Spongebob" age={30} isStudent={true}/>
+        <Button> </Button>
     </>
   );
   //or
