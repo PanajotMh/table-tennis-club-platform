@@ -48,9 +48,17 @@ function App() { //serve as the root
       // When we send key value pairs to a component they're all stored within the props opbject.  Name is key, value is Spongebob or whatever Name
       // If some data is not a string literal, you have to enclose it with curly braces
       }
-        <Student name="Spongebob" age={30} isStudent={true}/>
+        <Student name="Spongebob" age={42} isStudent={true}/>
         <Button> </Button>
+        <Student name="Patrick" age={42} isStudent={false}/>
+        <Student name="Squidward" age={50} isStudent={false}/>  
+        <Student name="Sandy" age={35} isStudent={true}/> 
+        <Student />
+
+
     </>
+
+    // Empty student component with no props
   );
   //or
   //<Header/> shorter version
