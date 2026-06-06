@@ -27,41 +27,41 @@ import Food from './Food.jsx';
 import Card from './Card.jsx';
 import Button from './Button.jsx';
 import Student from './Student.jsx';
-
+import UserGreeting from './UserGreeting.jsx';
+import List from './List.jsx'
 
 function App() { //serve as the root
-  return( // We only have capability to return one single component, enclose components with a fragment.
-
-    //We now have a header component
-    // Fragment <>
-    //We can re-use components and arrange them as we want.
-    <> 
-      {/* <Header> </Header>      
-      <Food> </Food>        
-      <Food></Food>
-      <Footer></Footer> */}
+  // Return a list component.
 
 
+    const fruits = [{id:1, name: "Apple", calories: 95},
+                  {id:2, name: "Orange", calories: 45},
+                  {id:3, name:"Banana", calories: 105},
+                  {id:4, name: "Coconut", calories: 150},
+                  {id:5, name: "Pineapple", calories: 37}
+    ];
 
-      {//Student is the child of app in this case
-      //If I want to send some data to my student component, we need to list key: value pairs.
-      // When we send key value pairs to a component they're all stored within the props opbject.  Name is key, value is Spongebob or whatever Name
-      // If some data is not a string literal, you have to enclose it with curly braces
-      }
-        <Student name="Spongebob" age={42} isStudent={true}/>
-        <Button> </Button>
-        <Student name="Patrick" age={42} isStudent={false}/>
-        <Student name="Squidward" age={50} isStudent={false}/>  
-        <Student name="Sandy" age={35} isStudent={true}/> 
-        <Student />
+    const vegetables = [{id:6, name: "Potatoes", calories: 110},
+                        {id:7, name: "Celery", calories: 15},
+                        {id:8, name:"Carrots", calories: 25},
+                        {id:9, name: "Corn", calories: 63},
+                        {id:10, name: "Broccoli", calories: 50}
+    ];
 
+    //only render if list is not empty.
+
+
+    // && short-circuiting
+  return( 
+    <>
+    
+    {fruits.length > 0 && <List items={fruits}  category="Fruits"/>} 
+    {fruits.length > 0 ? <List items={vegetables}  category="Vegetables"/> : null}
+    
 
     </>
-
-    // Empty student component with no props
   );
-  //or
-  //<Header/> shorter version
+ 
 }
 
 export default App

@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #f7e7e7;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -103,15 +103,45 @@ button:focus-visible {
   cursor: pointer;
 }
 
-.student{
-  font-family: Arial, sans-serif;
-  font-size: 2em;
+.welcome-message {
+  font-size: 2.5em;
+  background-color: hsl(164, 96%, 46%);
+  color: white;
   padding: 10px;
-  border: 1px solid hsl(0,50%,0.8%);
-
-}
-/* student class, paragraph element(/s)
-*/
-.student p{
+  border-radius: 5px;
   margin: 0;
+}
+
+.login-prompt {
+    font-size: 2.5em;
+  background-color: hsl(8, 94%, 38%);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0;
+}
+
+.list-category{
+  font-size: 2.5em;
+  font-weight: bold;
+  color:hsl(8, 75%, 8%);
+  margin-bottom: 10px;
+  text-align: center;
+  border: 3px solid;
+  border-radius: 5px;
+  background-color: hsl(164, 96%, 46%)
+}
+
+.list-items li{
+  font-size: 2em;
+  list-style: none;
+  color: hsl(0,0%,25%);
+  text-align: center;
+  margin: 0;
+}
+
+.list-items li:hover{
+  color: hsl(0,0%,45%);
+  cursor: pointer;
+  
 }
